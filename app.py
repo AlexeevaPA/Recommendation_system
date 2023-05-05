@@ -16,8 +16,7 @@ app=FastAPI()
 
 def batch_load_sql(query: str):
     engine = create_engine(
-        "postgresql://robot-startml-ro:pheiph0hahj1Vaif@"
-        "postgres.lab.karpov.courses:6432/startml"
+        "...."
     )
     conn=engine.connect().execution_options(
         stream_results=True)
@@ -51,14 +50,12 @@ def load_features_test():
 
     posts_features=pd.read_sql(
         """SELECT * FROM public.posts_info_features_t2""",
-        con="postgresql://robot-startml-ro:pheiph0hahj1Vaif@"
-        "postgres.lab.karpov.courses:6432/startml"
+        con="...."
     )
 
     user_features=pd.read_sql(
         """SELECT * FROM public.user_data""",
-        con="postgresql://robot-startml-ro:pheiph0hahj1Vaif@"
-            "postgres.lab.karpov.courses:6432/startml"
+        con="...."
     )
     return [liked_posts, posts_features, user_features]
 
@@ -74,14 +71,12 @@ def load_features_control():
 
     posts_features=pd.read_sql(
         """SELECT * FROM public.posts_info_features_t""",
-        con="postgresql://robot-startml-ro:pheiph0hahj1Vaif@"
-        "postgres.lab.karpov.courses:6432/startml"
+        con="...."
     )
 
     user_features=pd.read_sql(
         """SELECT * FROM public.user_data""",
-        con="postgresql://robot-startml-ro:pheiph0hahj1Vaif@"
-            "postgres.lab.karpov.courses:6432/startml"
+        con="...."
     )
     return [liked_posts, posts_features, user_features]
 

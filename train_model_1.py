@@ -17,8 +17,7 @@ from sklearn.pipeline import Pipeline
 user_info = pd.read_sql(
     """SELECT * FROM public.user_data""",
     
-    con="postgresql://robot-startml-ro:pheiph0hahj1Vaif@"
-        "postgres.lab.karpov.courses:6432/startml"
+    con="...."
 )
 
 ### Loading data (posts)
@@ -26,8 +25,7 @@ user_info = pd.read_sql(
 posts_info = pd.read_sql(
     """SELECT * FROM public.post_text_df""",
     
-    con="postgresql://robot-startml-ro:pheiph0hahj1Vaif@"
-        "postgres.lab.karpov.courses:6432/startml"
+    con="...."
 )
 
 ### Loading data (information about users' actions)
@@ -35,8 +33,7 @@ posts_info = pd.read_sql(
 feed_data = pd.read_sql(
     """SELECT * FROM public.feed_data LIMIT 1000000""",
     
-    con="postgresql://robot-startml-ro:pheiph0hahj1Vaif@"
-        "postgres.lab.karpov.courses:6432/startml"
+    con="...."
 )
 
 feed_data = feed_data[feed_data.action=='view']
